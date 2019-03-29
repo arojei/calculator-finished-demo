@@ -23,7 +23,7 @@ steps:
   inputs:
     testResultsFiles: 'out/test-results.xml'
     testRunTitle: 'Test results for JavaScript'
-    testResultsFormat: NUnit
+    testResultsFormat: JUnit
 
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish Code Coverage Results'
@@ -37,7 +37,7 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
-    archiveFile: calculator.zip
+    archiveFile: calculator
     archiveType: zip
     replaceExistingArchive: true
 
