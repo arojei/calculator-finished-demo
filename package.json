@@ -11,7 +11,6 @@
     "start": "node server.js",
     "build": "exit 0",
     "test": "mocha --timeout 10000 --reporter mocha-multi-reporters --reporter-options configFile=test/config.json"
-    "test-with-coverage": "nyc --reporter=text mocha"
   },
   "keywords": [
     "azure",
