@@ -28,7 +28,7 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
-    archiveFile: calculator.zip
+    archiveFile: '$(Build.ArtifactStagingDirectory)/calculator_$(Build.BuildId).zip' 
     archiveType: zip
     replaceExistingArchive: true
 
