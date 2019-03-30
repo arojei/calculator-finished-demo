@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "exit 0",
-    "test": "mocha --timeout 10000 --reporter mocha-multi-reporters --reporter-options configFile=test/config.json"
+    "test": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-multi-reporters --reporter-options configFile=test/config.json"
   },
   "keywords": [
     "azure",
@@ -31,5 +31,6 @@
     "mocha-junit-reporter": "^1.18.0",
     "mocha-multi-reporters": "^1.1.7",
     "supertest": "^3.1.0"
+    "nyc": "^12.0.2"
   }
 }
