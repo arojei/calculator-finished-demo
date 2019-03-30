@@ -37,8 +37,11 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
-    archiveFile: calculator
+    archiveFile: calculator.zip
     archiveType: zip
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.DefaultWorkingDirectory)' 
+    artifactName: 'drop'
