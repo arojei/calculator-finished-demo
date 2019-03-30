@@ -15,22 +15,13 @@ steps:
 - script: |
     npm install
     npm run build
-    npm test-with-coverage
+    npm test
   displayName: 'npm install and build'
 
 - task: PublishTestResults@2
   displayName: 'Publish test results'
   inputs:
     testResultsFiles: 'out/test-results.xml'
-    testRunTitle: 'Test results for JavaScript'
-    testResultsFormat: JUnit
-
-- task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Results'
-  inputs: 
-        codeCoverageTool: Cobertura
-        summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
-        reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
 - task: ArchiveFiles@2
   displayName: 'Archive Files'
