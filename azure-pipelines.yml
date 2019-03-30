@@ -42,6 +42,3 @@ steps:
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: '$(Build.DefaultWorkingDirectory)' 
-    artifactName: 'drop'
